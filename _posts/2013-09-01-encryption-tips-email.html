@@ -1,0 +1,40 @@
+---
+layout: post
+title: ! 'Encryption Tips: Email'
+categories:
+- Blog
+tags:
+- Encryption
+- Sudo Room
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '3'
+  pexeto_video: ''
+  _yoast_wpseo_linkdex: '0'
+author:
+  login: Alice
+  email: acetownes@gmail.com
+  display_name: Alice
+  first_name: Alice
+  last_name: ''
+---
+<div>
+<div>
+<p>PGP Encryption taught by Will.</p>
+<p>Download <strong>GPG, Mozilla Thunderbird, and a plugin called Enigmail</strong>. PGP encryption was used by Glenn Greenwald and Snowden. It works with a pair of keys, a private and a public key.</p>
+<p>Encryption is done by sequences of numbers, and you and your recipient have to share the same “cypher” for that. Simplest is Rot13, shift all the letters 13 spaces. And then you can change each letter by different increments, which creates much higher level of security. Then there's “Asymmetric encryption” - this is our method, it uses two keys, private and public. <strong>Someone can write you an email that’s encrypted by public key and can only be decrypted with your private key.</strong> If you send an email to four people, it will be encrypted four times using their public keys.<!--more--></p>
+<p>Here are the essential instructions:</p>
+<p>Once you have downloaded the two applications and the plugin, you will go to the Thunderbird menu, find OpenPGP and select “Key Management” and generate a key with a very secure passcode/password. (There’s a dialogue box regarding revocation certificates, you can do that or wait til later). You will right click on the key in the Key Management window, and upload it to all the listed servers. Then once you exchange keys with another person, when you create an email, you can select encrypt by clicking on the key on the bottom right hand corner.</p>
+<p>Additional security measures:</p>
+<p>The number one way to circumvent this form of encryption is to create a third party intermediary between you and the other person ("man in the middle"). First they replace your public key with their public key and then decrypt it, then recrypt it using your correct public key and send it to the true recipient. Therefore:</p>
+<ul>
+<li>You want your public key to be on many sites/in many places so that it can’t be replaced by someone else’s public key to get access to the communications. Use https websites.</li>
+<li>You want to right click on a user’s key and select key properties, and read out the “<strong>fingerprint</strong>” (a summary of the key) in person to verify that you have the correct public key. If one byte is changed in the public key, it gives a different fingerprint.</li>
+<li>What happens when private keys are compromised? “key revocation certificate” creates a centralized way to inform people not to use the public key.</li>
+</ul>
+<p>You can also use encryption to sign the email and even a recipient who does not have your public key will know it’s sent by you. That’s a separate feature.</p>
+<p>Multiple keys, and transitioning to new keys: You should begin to transition to new keys in advance, and use it to sign emails that are encrypted using the old key. Then, when you revoke the old key, people know that the new key is from the same person.</p>
+</div>
+</div>
