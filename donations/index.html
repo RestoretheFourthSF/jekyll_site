@@ -1,0 +1,39 @@
+---
+layout: base
+---
+<div class="blog-cover" style="background-image:url(/images/{{ site.inc.cover_image }});">
+    
+    <section>
+        <div class="container">
+            <h1>{{ site.inc.title }}</h1>
+            {% if site.inc.subtitle %}<h3>{{ site.inc.subtitle }}</h3>{% endif %}
+        
+            {% if site.inc.twitter %}
+            <a href="https://twitter.com/{{ site.inc.twitter }}" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter"></i></a>
+            {% endif %}
+            {% if site.inc.facebook %}
+            <a href="http://facebook.com/{{ site.inc.facebook }}" title="Like on Facebook" target="_blank"><i class="icon icon-facebook"></i></a>
+            {% endif %}
+            {% if site.inc.reddit %}
+            <a href="http://reddit.com/r/{{ site.inc.reddit }}" title="Follow on Reddit" target="_blank"><i class="icon icon-reddit"></i></a>
+            {% endif %}
+            <a href="/feed.xml" title="RSS Feed">
+                <i class="icon icon-rss"></i>
+            </a>
+        </div>
+    </section>
+</div>
+
+<article class="container">
+<h2>Donations</h2>
+<p>Your donations to Restore the Fourth will be used to support 4th Amendment related activities at chapters across the country including in San Francisco. Restore the Fourth in incorporated in Massachusetts and donations are not tax deductible. Restore the Fourth is following in the footsteps of venerable issue oriented political groups like the Sierra Club and the NRA in its structure. Visit http://restorethe4th.com for more information.  </p>
+<p>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="G3M6P48W3UZGY">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+           </form>
+
+</p>
+</article>
